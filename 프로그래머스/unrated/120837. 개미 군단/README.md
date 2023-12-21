@@ -2,6 +2,8 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120837) 
 
+# 그리드 알고리즘 을 사용하여 푼 문제
+
 ### 성능 요약
 
 메모리: 75.3 MB, 시간: 0.01 ms
