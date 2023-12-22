@@ -1,12 +1,10 @@
 # [level unrated] 개미 군단 - 120837 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120837) 
-
-# 그리드 알고리즘 을 사용하여 푼 문제
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120837?language=javascript) 
 
 ### 성능 요약
 
-메모리: 75.3 MB, 시간: 0.01 ms
+메모리: 33.4 MB, 시간: 0.04 ms
 
 ### 구분
 
@@ -18,7 +16,7 @@
 
 ### 제출 일자
 
-2023년 12월 5일 7:25:19
+2023년 12월 5일 18:6:28
 
 ### 문제 설명
 
