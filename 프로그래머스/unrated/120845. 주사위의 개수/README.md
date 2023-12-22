@@ -1,5 +1,7 @@
 # [level unrated] 주사위의 개수 - 120845 
 
+간단한 수학공식을 이용하여 푸는 문제 자바스크립트는 구조분해할당? 이란걸 쓰면 되는거같다 ( 아직 안해봄 ) 
+
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120845) 
 
 ### 성능 요약
