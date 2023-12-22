@@ -4,7 +4,7 @@ class Solution {
 
         // int[] box = [10,8,7] 가로 세로 높이 
         // n => 모서리 길이
-        // 가로 세로 높이를 모서리 만큼 나눈다음 가로*세로*높이 해주시면 됩니다
+        // 가로 세로 높이를 모서리 만큼 나눈다음 가로*세로*높이 해주면됨 ..
         int row = box[0] / n;
         int colum = box[1] /n;
         int height = box[2] /n;
