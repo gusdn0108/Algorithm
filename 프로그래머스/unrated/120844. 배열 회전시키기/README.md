@@ -1,5 +1,7 @@
 # [level unrated] 배열 회전시키기 - 120844 
 
+Deque로 문제 풀기 
+
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120844?language=java) 
 
 ### 성능 요약
