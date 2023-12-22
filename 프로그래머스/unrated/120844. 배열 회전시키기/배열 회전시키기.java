@@ -29,31 +29,30 @@ class Solution {
     }
 
     // deque
+    import java.util.ArrayDeque;
+    import java.util.Deque;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+        class Solution {
+            public int[] solution(int[] numbers, String direction) {
+                Deque<Integer> deque = new ArrayDeque<>();
+                for (int number : numbers) {
+                    deque.add(number);
+                }
 
-class Solution {
-    public int[] solution(int[] numbers, String direction) {
-        Deque<Integer> deque = new ArrayDeque<>();
-        for (int number : numbers) {
-            deque.add(number);
+                if ("right".equals(direction)) {
+                    deque.addFirst(deque.removeLast());
+                } else if ("left".equals(direction)) {
+                    deque.addLast(deque.removeFirst());
+                }
+
+                int[] answer = new int[numbers.length];
+                int i = 0;
+                for (int num : deque) {
+                    answer[i++] = num;
+                }
+
+                return answer;
+            }
         }
-
-        if ("right".equals(direction)) {
-            deque.addFirst(deque.removeLast());
-        } else if ("left".equals(direction)) {
-            deque.addLast(deque.removeFirst());
-        }
-
-        int[] answer = new int[numbers.length];
-        int i = 0;
-        for (int num : deque) {
-            answer[i++] = num;
-        }
-
-        return answer;
-    }
-}
 
 }
