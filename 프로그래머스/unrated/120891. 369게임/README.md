@@ -1,5 +1,7 @@
 # [level unrated] 369게임 - 120891 
 
+기초적인 문제.. 좀 이상하게 생각해서 막혔던 문제...ㅠ
+
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120891) 
 
 ### 성능 요약
