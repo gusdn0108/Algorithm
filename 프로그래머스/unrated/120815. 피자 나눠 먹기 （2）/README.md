@@ -1,5 +1,7 @@
 # [level unrated] 피자 나눠 먹기 (2) - 120815 
 
+stream으로 다시 풀어보기
+
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120815) 
 
 ### 성능 요약
