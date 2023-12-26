@@ -1,5 +1,7 @@
 # [level unrated] A로 B 만들기 - 120886 
 
+졸릴때 풀어서 잘 기억이안남.. 다시 풀어야함
+
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120886) 
 
 ### 성능 요약
