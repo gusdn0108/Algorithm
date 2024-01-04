@@ -1,36 +1,23 @@
-import java.util.*;
-import java.io.*;
-//import java.math.BigInteger;
-public class Main{
-    
-    public static void main(String [] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringBuilder sb = new StringBuilder();
-        final int NUMBER_OF_TEAM = Integer.parseInt(br.readLine());
-        int member[] = new int [NUMBER_OF_TEAM * 2];
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        for(int i=0;i < NUMBER_OF_TEAM * 2; i++) {
-            member[i] = Integer.parseInt(st.nextToken());
-        }
-        Arrays.sort(member);
-        int min = 200000;
-        for(int i=0;i<NUMBER_OF_TEAM;i++) {
-            int teamScore = member[i] + member[NUMBER_OF_TEAM*2-1-i];
-            if(teamScore < min) {
-                min = teamScore;
+import java.util.Arrays;
+import java.util.Scanner;
+
+        public class Main {
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                
+                int n = sc.nextInt();
+                int[] scores = new int[2 * n];
+                for (int i = 0; i < 2 * n; i++) {
+                    scores[i] = sc.nextInt();
+                }
+                Arrays.sort(scores);
+                int minTeamScore = Integer.MAX_VALUE;
+                for (int i = 0; i < n; i++) {
+                    int teamScore = scores[i] + scores[2 * n - 1 - i];
+                    minTeamScore = Math.min(minTeamScore, teamScore);
+                }
+                System.out.println(minTeamScore);
+                sc.close();
             }
         }
-        sb.append(min);
-        sb.append("\n"); 
-        
-        bw.write(sb.toString());
-        
-        bw.flush();
-        br.close();
-        bw.close();
-        
-    }
 
-    
-}
