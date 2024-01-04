@@ -1,23 +1,35 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-        public class Main {
-            public static void main(String[] args) {
-                Scanner sc = new Scanner(System.in);
-                
-                int n = sc.nextInt();
-                int[] scores = new int[2 * n];
-                for (int i = 0; i < 2 * n; i++) {
-                    scores[i] = sc.nextInt();
-                }
-                Arrays.sort(scores);
-                int minTeamScore = Integer.MAX_VALUE;
-                for (int i = 0; i < n; i++) {
-                    int teamScore = scores[i] + scores[2 * n - 1 - i];
-                    minTeamScore = Math.min(minTeamScore, teamScore);
-                }
-                System.out.println(minTeamScore);
-                sc.close();
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // 팀수 => n
+        int n = sc.nextInt();
+
+        // 학생 수 2N
+        int[] MEMBER = new int[n * 2];
+
+        // menber [] => 4자리수 배열
+        String TEAM_SCORE = sc.next();
+
+        String[] split = TEAM_SCORE.split("");
+        for (int i = 0; i < 2 * n; i++) {
+            int parseInt = Integer.parseInt(split[i]);
+            MEMBER[i] = parseInt;
+        }
+
+        Arrays.sort(MEMBER);
+
+        int min = 200000;
+        for(int i = 0; i < 2 * n; i++) {
+            int teamScore = MEMBER[i] + MEMBER[n * 2 - 1 - i];
+            if(teamScore < min) {
+                min = teamScore;
             }
         }
 
+        System.out.println(min);
+    }
+}
