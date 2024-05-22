@@ -1,31 +1,37 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.Stack;
 
 public class Solution {
 
     public int[] solution(int[] arr) {
         int[] answer = {};
-        Stack<Integer> stack = new Stack<Integer>();
-        stack.push(arr[0]);
+
+        int value = -1;
+        int n = 1;
 
         for (int i = 1; i < arr.length; i++) {
-            if(stack.peek() == arr[i]){
-                continue;
+            if(arr[i-1] == arr[i]){
+                arr[i-1] = value;
             }else {
-                stack.push(arr[i]);
+                n++;
             }
         }
 
-        answer = new int[stack.size()];
+        int[] array = new int[n];
+        int cnt = 0;
 
-        for (int i = stack.size()-1; i >=0 ; i--) {
-            answer[i] = stack.pop();
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] != value){
+                array[cnt++] = arr[i];
+            }
         }
+        
+
+
+        answer = array;
 
         return answer;
     }
 }
+
+
