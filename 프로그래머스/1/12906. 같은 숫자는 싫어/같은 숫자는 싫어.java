@@ -1,37 +1,31 @@
-import java.util.ArrayList;
-import java.util.Stack;
+import java.util.*;
 
 public class Solution {
+    public int[] solution(int []arr) {
 
-    public int[] solution(int[] arr) {
-        int[] answer = {};
-
-        int value = -1;
-        int n = 1;
-
-        for (int i = 1; i < arr.length; i++) {
-            if(arr[i-1] == arr[i]){
-                arr[i-1] = value;
-            }else {
-                n++;
-            }
-        }
-
-        int[] array = new int[n];
-        int cnt = 0;
+        // arr => [1,1,3,3,0,1,1]
+        // answer => [1,3,0,1]
+        Stack<Integer> stack = new Stack<>();
 
         for (int i = 0; i < arr.length; i++) {
-            if(arr[i] != value){
-                array[cnt++] = arr[i];
+            // isempty 랑 empty 차이
+            // isempty 는 인터페이스가 collection으로 반환하는건가
+            // empty 는 stack으로 반환함
+            if(!stack.empty()){
+                if(stack.peek() != arr[i]){
+                    stack.push(arr[i]);
+                }
+            }else {
+                stack.push(arr[i]);
             }
         }
+
+
+        int[] answer =new int[stack.size()];
+        for (int i = 0; i < stack.size(); i++) {
+            answer[i] = stack.get(i);
+        }
         
-
-
-        answer = array;
-
         return answer;
     }
 }
-
-
